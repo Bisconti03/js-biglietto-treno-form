@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form biglietto treno</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -12,22 +13,22 @@
     <div class="main-div">
         <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
 
-        <div class="container">
+        <div class="container-top">
             <div class="row ">
 
             
                 <div class="col ">
-                    <label for="nome-utente" class="d-block">Nome e cognome</label>
-                    <input id="nome-utente" type="text"  placeholder="Inserisci il tuo nome">
+                    <label for="nome-utente" class="bold" >Nome e cognome</label>
+                    <input id="nome-utente" type="text" class="border-red" placeholder="Inserisci il tuo nome">
                 </div>
 
                 <div class="col">
-                    <label for="km">Chilometri</label>
+                    <label for="km" class="bold">Chilometri</label>
                     <input id="km" type="number"  placeholder="Km da percorrere">
                 </div>
 
                 <div class="col">
-                <label for="fascia-eta">Fascia d'età;</label>
+                <label for="fascia-eta" class="bold">Fascia d'età</label>
                 <select id="fascia-eta" >
                     <option value="minorenne">Minorenne</option>
                     <option value="maggiorenne">Maggiorenne</option>
@@ -39,16 +40,43 @@
 
             <div class="row">
                 
-                    <button id="genera" >Genera</button>
-                    <button id="annulla" >Annulla</button>
+                    <button id="genera" class="my-btn" >Genera</button>
+                    <button id="annulla" class="my-btn">Annulla</button>
                     
                   
             </div>
        
         </div>
+
+        <h2>IL TUO BIGLIETTO</h2>
+        <div id="biglietto" class="container-bottom hide ">
+            <h3 >Dettaglio passeggeri</h3>
+            <div class="bottom-row ">
+              <div class="col bg-grey my-padding">
+                <h3>NOME PASSEGGERO</h3>
+                <h4 id="nome-passegero"></h4>
+              </div>
+              <div class="col">
+                <table>
+                  <tr>
+                    <th>Offerta</th>
+                    <th>Carrozza</th>
+                    <th>Codice CP</th>
+                    <th>Costo biglietto</th>
+                  </tr>
+                  <tr>
+                    <td id="offerta"></td>
+                    <td id="carrozza"></td>
+                    <td id="codice-cp"></td>
+                    <td id="costo-biglietto"></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
     </div>
     
 
-    <script src="js/script.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
