@@ -5,34 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form biglietto treno</title>
-
+    
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
-    <div>
-        <label for="nome-utente">Nome e cognome</label>
-        <input id="nome-utente" type="text"  placeholder="Inserisci il tuo nome">
+    <div class="main-div">
+        <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+
+        <div class="container">
+            <div class="row ">
+
+            
+                <div class="col ">
+                    <label for="nome-utente" class="d-block">Nome e cognome</label>
+                    <input id="nome-utente" type="text"  placeholder="Inserisci il tuo nome">
+                </div>
+
+                <div class="col">
+                    <label for="km">Chilometri</label>
+                    <input id="km" type="number"  placeholder="Km da percorrere">
+                </div>
+
+                <div class="col">
+                <label for="fascia-eta">Fascia d'età;</label>
+                <select id="fascia-eta" >
+                    <option value="minorenne">Minorenne</option>
+                    <option value="maggiorenne">Maggiorenne</option>
+                    <option value="over65">Over 65</option>
+                </select>
+                </div> 
+
+            </div>
+
+            <div class="row">
+                
+                    <button id="genera" >Genera</button>
+                    <button id="annulla" >Annulla</button>
+                    
+                  
+            </div>
+       
+        </div>
     </div>
-
-    <div>
-        <label for="km">Chilometri</label>
-        <input id="km" type="number"  placeholder="Km da percorrere">
-      </div>
-
-    <div>
-      <label for="fascia-eta">Fascia d'et&agrave;</label>
-      <select id="fascia-eta" >
-        <option value="minorenne">Minorenne</option>
-        <option value="maggiorenne">Maggiorenne</option>
-        <option value="over65">Over 65</option>
-      </select>
-    </div> 
-
-    <div>
-        <button id="genera" >Genera</button>
-        
-      </div>
+    
 
     <script src="js/script.js"></script>
 </body>
